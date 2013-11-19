@@ -1,0 +1,10 @@
+[user]
+	name = Sam Gibson
+	email = sam@ifdown.net 
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[core]
+	excludesfile = /Users/sam/.gitignore_global

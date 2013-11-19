@@ -1,0 +1,16 @@
+--ignore-dir=.git
+--type-add=ruby=.rake,.rsel,.builder,.pp,.jbuilder
+--type-add=html=.html.erb,.html.haml,.haml
+--type-add=js=.js.erb
+--type-add=js=.coffee
+--type-add=css=.sass,.scss,.less
+--type-set=cucumber=.feature
+--ignore-dir=vendor
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=doc
+--ignore-dir=coverage
+--sort-files
+--color
+--follow
+--group
