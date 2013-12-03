@@ -1,3 +1,4 @@
 .password-store
 *.swp
 .ssh
+.vim/bundle/*

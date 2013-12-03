@@ -93,7 +93,7 @@ precmd () {
 }
 
 CURRENT_BG='NONE'
-SEGMENT_SEPARATOR=''
+SEGMENT_SEPARATOR=''
 
 prompt_segment() {
   local bg fg
@@ -115,12 +115,8 @@ prompt_end() {
   else
     echo -n "%{%k%}"
   fi
-  echo -n "%{%f%}"
+  echo -n "%{%f%} $"
   CURRENT_BG=''
-}
-
-prompt_time() {
-    prompt_segment 025 white '%D{%H:%M:%S} '
 }
 
 prompt_cwd() {
@@ -142,12 +138,11 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' stagedstr "*"
 zstyle ':vcs_info:*' unstagedstr "*"
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git*' formats " %b"
+zstyle ':vcs_info:git*' formats "@%b"
 
 ## Main prompt
 build_prompt() {
   RETVAL=$?
-  prompt_time
   prompt_user
   prompt_cwd
   prompt_git
@@ -155,12 +150,6 @@ build_prompt() {
 }
 
 PROMPT='%{%f%b%k%}$(build_prompt) '
-
-# Refresh the timestamp on the prompt every 1 seconds by redrawing it
-TMOUT=1
-TRAPALRM() {
-    zle reset-prompt
-}
 
 # The following lines were added by compinstall
 
