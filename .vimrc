@@ -20,6 +20,7 @@ Bundle 'vim-scripts/VimClojure'
 Bundle 'bling/vim-airline'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'mbbill/undotree'
+Bundle 'groenewege/vim-less'
 " Bundle 'plasticboy/vim-markdown'
 " let g:vim_markdown_folding_disabled=1
 
@@ -62,7 +63,7 @@ hi PreProc guifg=salmon guibg=grey15 ctermfg=red
 " Don't insert a comment after CR
 set formatoptions-=r
 
-set guifont=Inconsolata\ for\ Powerline:h16
+set guifont=Inconsolata\ for\ Powerline:h14
 let g:airline_powerline_fonts = 1
 " Hide the toolbar in macvim
 if has("gui_running")
