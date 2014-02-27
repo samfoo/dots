@@ -153,6 +153,8 @@ PROMPT='%{%f%b%k%}$(build_prompt) '
 
 # The following lines were added by compinstall
 
+fpath=(~/.zsh/completion $fpath)
+
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' expand prefix suffix
 zstyle ':completion:*' file-sort name
