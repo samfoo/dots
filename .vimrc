@@ -21,8 +21,6 @@ Bundle 'bling/vim-airline'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'mbbill/undotree'
 Bundle 'groenewege/vim-less'
-" Bundle 'plasticboy/vim-markdown'
-" let g:vim_markdown_folding_disabled=1
 
 filetype plugin indent on
 
