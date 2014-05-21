@@ -17,7 +17,7 @@ let g:colors_name="flat"
 " preferred groups
 " (see `:h w18`)
 "
-hi Normal          ctermfg=249    ctermbg=235    cterm=none    guifg=#bdc3c7    guibg=#2d2d2d    gui=none
+hi Normal          ctermfg=249    ctermbg=235    cterm=none    guifg=#bdc3c7    guibg=#1d1d1d gui=none
 hi Comment         ctermfg=244    guifg=#808080
 
 " yellow

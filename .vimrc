@@ -21,6 +21,7 @@ Bundle 'bling/vim-airline'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'mbbill/undotree'
 Bundle 'groenewege/vim-less'
+Bundle 'rodjek/vim-puppet'
 
 filetype plugin indent on
 
@@ -61,7 +62,7 @@ hi PreProc guifg=salmon guibg=grey15 ctermfg=red
 " Don't insert a comment after CR
 set formatoptions-=r
 
-set guifont=Inconsolata\ for\ Powerline:h14
+set guifont=Inconsolata\ for\ Powerline:h16
 let g:airline_powerline_fonts = 1
 " Hide the toolbar in macvim
 if has("gui_running")
@@ -110,6 +111,7 @@ set wildignore+=*.pyc
 set wildignore+=tmp
 set wildignore+=sass-cache
 set wildignore+=*.gz
+set wildignore+=node_modules
 
 " Rainbow parens are pretty
 " let g:rbpt_colorpairs = [
@@ -143,6 +145,7 @@ autocmd BufRead *.rhtml set filetype=eruby
 autocmd BufRead *.ru set filetype=ruby
 autocmd BufRead *.erb set filetype=eruby
 autocmd BufRead *.jbuilder set filetype=ruby
+autocmd BufRead *.pc set filetype=c
 
 " Abbreviations (yes, I went there)
 iabbrev ldis ಠ_ಠ
