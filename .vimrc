@@ -27,6 +27,7 @@ filetype plugin indent on
 
 let mapleader = "\\"
 
+set noswapfile
 set encoding=utf-8
 set autoindent
 " set cursorline

@@ -4,6 +4,9 @@ unsetopt ignoreeof
 alias -r gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias -r v=gvim
 
+# Vagrant
+alias -r vdu="vagrant destroy && vagrant up"
+
 # Always try listing in color
 alias -r ls='ls -G'
 
