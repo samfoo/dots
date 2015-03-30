@@ -22,6 +22,12 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'mbbill/undotree'
 Bundle 'groenewege/vim-less'
 Bundle 'rodjek/vim-puppet'
+Bundle 'wting/rust.vim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'wavded/vim-stylus'
+Bundle 'scrooloose/nerdtree'
+Bundle 'altercation/vim-colors-solarized'
+Bundle "pangloss/vim-javascript"
 
 filetype plugin indent on
 
@@ -52,7 +58,7 @@ set colorcolumn=80
 
 " Colors of the rainbow and appearance
 syntax on
-colorscheme flat
+colorscheme molokai
 
 set background=dark
 hi ColorColumn guibg=gray13
@@ -113,6 +119,7 @@ set wildignore+=tmp
 set wildignore+=sass-cache
 set wildignore+=*.gz
 set wildignore+=node_modules
+set wildignore+=site
 
 " Rainbow parens are pretty
 " let g:rbpt_colorpairs = [
@@ -147,6 +154,7 @@ autocmd BufRead *.ru set filetype=ruby
 autocmd BufRead *.erb set filetype=eruby
 autocmd BufRead *.jbuilder set filetype=ruby
 autocmd BufRead *.pc set filetype=c
+autocmd BufRead *.cljx set filetype=clojure
 
 " Abbreviations (yes, I went there)
 iabbrev ldis ಠ_ಠ

@@ -5,7 +5,7 @@ alias -r gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias -r v=gvim
 
 # Vagrant
-alias -r vdu="vagrant destroy && vagrant up"
+alias -r vdu="vagrant destroy -f && vagrant up"
 
 # Always try listing in color
 alias -r ls='ls -G'
@@ -48,6 +48,9 @@ function gsub {
 alias -r gpom="git push origin master"
 alias -r gpod="git push origin development"
 alias -r gpr="git pull --rebase"
+function gbd {
+    git log $1 \^$2 --no-merges --oneline
+}
 
 # virtualenv and wrapper. (NOTE: this is a bit slow... should probably diagnose that)
 #export WORKON_HOME=~/.envs

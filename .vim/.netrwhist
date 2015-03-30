@@ -1,8 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/sam/projects/roomz/spec/controllers/admin'
-let g:netrw_dirhist_2='/Users/sam/projects/roomz/app/controllers'
-let g:netrw_dirhist_3='/Users/sam/projects/roomz/app/controllers/users'
-let g:netrw_dirhist_4='/Users/sam/projects/roomz/app/controllers'
-let g:netrw_dirhist_5='/Users/sam/projects/roomz/app/controllers/listings'
-let g:netrw_dirhist_6='/Users/sam/projects/fireproof/app/models'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/sam/scrap/ms/tutorial-dist/topics/integration_rpc/start'
