@@ -7,27 +7,27 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Bundle 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'
 
 " More packages go here:
-Bundle 'edsono/vim-matchit'
-Bundle 'kien/ctrlp.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-rails'
-Bundle 'mileszs/ack.vim'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'vim-scripts/VimClojure'
-Bundle 'bling/vim-airline'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'mbbill/undotree'
-Bundle 'groenewege/vim-less'
-Bundle 'rodjek/vim-puppet'
-Bundle 'wting/rust.vim'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'wavded/vim-stylus'
-Bundle 'scrooloose/nerdtree'
-Bundle 'altercation/vim-colors-solarized'
-Bundle "pangloss/vim-javascript"
+Plugin 'edsono/vim-matchit'
+Plugin 'kien/ctrlp.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-rails'
+Plugin 'mileszs/ack.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'vim-scripts/VimClojure'
+Plugin 'bling/vim-airline'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'mbbill/undotree'
+Plugin 'groenewege/vim-less'
+Plugin 'rodjek/vim-puppet'
+Plugin 'wting/rust.vim'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'wavded/vim-stylus'
+Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'pangloss/vim-javascript'
 
 filetype plugin indent on
 
