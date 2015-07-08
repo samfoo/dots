@@ -1,4 +1,6 @@
 --ignore-dir=.git
+--ignore-dir=.cargo
+--ignore-dir=.servo
 --type-add=ruby=.rake,.rsel,.builder,.pp,.jbuilder
 --type-add=html=.html.erb,.html.haml,.haml,.jade
 --type-add=js=.js.erb

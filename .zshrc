@@ -1,5 +1,8 @@
 unsetopt ignoreeof
 
+# BT
+alias -r dev1-server='MAVEN_OPTS="-Xmx3072m -XX:MaxPermSize=512M -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled -Djavax.net.ssl.keyStore=`pwd`/src/test/resources/keystore/dwgps0022.btfin.com.jks -Djavax.net.ssl.trustStore=`pwd`/src/test/resources/keystore/dwgps0022.btfin.com.jks -Djavax.net.ssl.trustStorePassword=YTMvhQq7YvwwawDh -Djavax.net.ssl.keyStorePassword=YTMvhQq7YvwwawDh -Dstub.webservice.filestub=false -Davaloq.webservice.filestub=false -Dapplication-submission.webservice.filestub=false -DavaloqStatic.webservice.filestub=false -Djpa.dialect=org.hibernate.dialect.Oracle9Dialect -Djpa.showSql=true -Djdbc.driver=oracle.jdbc.driver.OracleDriver -Djdbc.url=jdbc:oracle:thin:@ngwdw-vip.wsdc.nsw.westpac.com.au:1410/PERD1 -Djdbc.username=PER_OWNER_DEV1 -Djdbc.password=PER_OWNER_DEV1_pwd -Dwebclient.resource.location=file:`pwd`/../nextgen-ip-ui/webapp/" mvn clean tomcat7:run'
+
 # Setup vim
 alias -r gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias -r v=gvim

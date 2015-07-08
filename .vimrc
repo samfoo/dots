@@ -29,6 +29,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'pangloss/vim-javascript'
 
+call vundle#end()
 filetype plugin indent on
 
 let mapleader = "\\"
@@ -53,7 +54,7 @@ set smartindent
 set nowrap
 set textwidth=0
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-set list listchars=tab:»·,trail:·
+set list listchars=tab:»·,trail:·,precedes:·
 set colorcolumn=80
 
 " Colors of the rainbow and appearance
@@ -109,7 +110,7 @@ set esckeys
 set wildmenu
 set wildmode=list:longest
 
-set wildignore+=.hg,.git,.svn
+set wildignore+=.hg,.git,.svn,.servo,.cargo,vendor,log,tmp,doc
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
 set wildignore+=*.jar,*.o,*.obj,*.exe,*.dll,*.manifest,*.class
 set wildignore+=*.sw?

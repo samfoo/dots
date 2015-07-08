@@ -12,6 +12,7 @@
 [alias]
 	st = status
 	co = checkout
+	yolo = push --force --no-verify
 [push]
 	default = current
 [difftool "sourcetree"]
