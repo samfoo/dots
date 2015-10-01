@@ -28,6 +28,7 @@ Plugin 'wavded/vim-stylus'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'pangloss/vim-javascript'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
@@ -70,8 +71,9 @@ hi PreProc guifg=salmon guibg=grey15 ctermfg=red
 " Don't insert a comment after CR
 set formatoptions-=r
 
-set guifont=Inconsolata\ for\ Powerline:h16
-let g:airline_powerline_fonts = 1
+" set guifont=Inconsolata\ for\ Powerline:h16
+set guifont=Anonymous\ Pro:h16
+" let g:airline_powerline_fonts = 1
 " Hide the toolbar in macvim
 if has("gui_running")
     set guioptions=egmrt

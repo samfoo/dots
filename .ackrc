@@ -7,6 +7,7 @@
 --type-add=js=.coffee
 --type-add=css=.sass,.scss,.less
 --type-add=scss=.sass,.scss
+--type-set=toml=.toml
 --type-set=cucumber=.feature
 --ignore-dir=vendor
 --ignore-dir=log
