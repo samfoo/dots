@@ -29,6 +29,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'pangloss/vim-javascript'
 Plugin 'fatih/vim-go'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'skammer/vim-css-color'
+Plugin 'hail2u/vim-css3-syntax'
 
 call vundle#end()
 filetype plugin indent on
@@ -112,7 +115,7 @@ set esckeys
 set wildmenu
 set wildmode=list:longest
 
-set wildignore+=.hg,.git,.svn,.servo,.cargo,vendor,log,tmp,doc
+set wildignore+=.hg,.git,.svn,.servo,.cargo,vendor,log,tmp,doc,lib
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
 set wildignore+=*.jar,*.o,*.obj,*.exe,*.dll,*.manifest,*.class
 set wildignore+=*.sw?

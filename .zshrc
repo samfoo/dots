@@ -1,8 +1,5 @@
 unsetopt ignoreeof
 
-# BT
-alias -r dev1-server='MAVEN_OPTS="-Xmx3072m -XX:MaxPermSize=512M -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled -Djavax.net.ssl.keyStore=`pwd`/src/test/resources/keystore/dwgps0022.btfin.com.jks -Djavax.net.ssl.trustStore=`pwd`/src/test/resources/keystore/dwgps0022.btfin.com.jks -Djavax.net.ssl.trustStorePassword=YTMvhQq7YvwwawDh -Djavax.net.ssl.keyStorePassword=YTMvhQq7YvwwawDh -Dstub.webservice.filestub=false -Davaloq.webservice.filestub=false -Dapplication-submission.webservice.filestub=false -DavaloqStatic.webservice.filestub=false -Djpa.dialect=org.hibernate.dialect.Oracle9Dialect -Djpa.showSql=true -Djdbc.driver=oracle.jdbc.driver.OracleDriver -Djdbc.url=jdbc:oracle:thin:@ngwdw-vip.wsdc.nsw.westpac.com.au:1410/PERD1 -Djdbc.username=PER_OWNER_DEV1 -Djdbc.password=PER_OWNER_DEV1_pwd -Dwebclient.resource.location=file:`pwd`/../nextgen-ip-ui/webapp/" mvn clean tomcat7:run'
-
 # Setup vim
 alias -r gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias -r v=gvim
@@ -45,6 +42,37 @@ function gsub {
         find . -type f -iname "*.$3" -exec perl -p -i -e "s/$1/$2/g" {} \;
     else
         find . -type f -exec perl -p -i -e "s/$1/$2/g" {} \;
+    fi
+}
+
+# extract any archive
+function extract {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)        tar xjf $1        ;;
+            *.tar.gz)         tar xzf $1        ;;
+            *.bz2)            bunzip2 $1        ;;
+            *.rar)            unrar x $1        ;;
+            *.gz)             gunzip $1         ;;
+            *.tar)            tar xf $1         ;;
+            *.tbz2)           tar xjf $1        ;;
+            *.tgz)            tar xzf $1        ;;
+            *.zip)            unzip $1          ;;
+            *.Z)              uncompress $1     ;;
+            *)                echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# pop up an osx notification about the exit status of the previous command
+# e.g. ./build; bn # go off an browse some reddit or something
+function bn {
+    if [ $? -eq 0 ] ; then
+        terminal-notifier -title '🚀 Hurray! 🚀' -message "Your build was successful. Get to work, slacker\!"
+    else
+        terminal-notifier -title '😱 Oh noes! 😱' -message "Your build build failed, were you even paying attention?"
     fi
 }
 
