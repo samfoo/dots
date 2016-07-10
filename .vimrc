@@ -63,7 +63,7 @@ set colorcolumn=80
 
 " Colors of the rainbow and appearance
 syntax on
-colorscheme molokai
+colorscheme onedark
 
 set background=dark
 hi ColorColumn guibg=gray13

@@ -210,3 +210,6 @@ zstyle :compinstall filename '/Users/sam/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+
+. /Users/sam/torch/install/bin/torch-activate
