@@ -32,6 +32,7 @@ Plugin 'fatih/vim-go'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'skammer/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'
+Plugin 'hashivim/vim-terraform'
 
 call vundle#end()
 filetype plugin indent on
