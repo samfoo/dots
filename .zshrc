@@ -1,48 +1,24 @@
 unsetopt ignoreeof
 
 # Setup vim
-alias -r gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
-alias -r v=gvim
+alias -r v=vim
 
 # Vagrant
 alias -r vdu="vagrant destroy -f && vagrant up"
 
 # Always try listing in color
-alias -r ls='ls -G'
-
-# Controlling itunes
-alias -r play="osascript -e 'tell app \"iTunes\" to playpause'"
-alias -r next="osascript -e 'tell app \"iTunes\" to next track'"
-alias -r prev="osascript -e 'tell app \"iTunes\" to previous track'"
+alias -r ls='ls --color'
 
 # print out shell colors
 alias -r colors='for code in {000..255}; do print -P -- "$code: %F{$code}Test%f"; done'
-
-# lua love `love .` should launch a game
-alias -r love='/Applications/love.app/Contents/MacOS/love'
 
 # time http requests
 alias -r curlperf="curl -o /dev/null -s -w %{time_connect}:%{time_starttransfer}:%{time_total}"
 alias -r curlxhr="curl -H 'X-Requested-With: XMLHttpRequest'"
 
-# password management
-alias -r pc="pass -c"
-function pg {
-    pass generate -c $1 20
-}
-
 # find a file in the current directory quickly
 function ff {
     find . -iname "*$1*"
-}
-
-# gsub some text with something else in place. (NOTE: not perfect)
-function gsub {
-    if [[ $3 != "" ]]; then
-        find . -type f -iname "*.$3" -exec perl -p -i -e "s/$1/$2/g" {} \;
-    else
-        find . -type f -exec perl -p -i -e "s/$1/$2/g" {} \;
-    fi
 }
 
 # extract any archive
@@ -66,36 +42,13 @@ function extract {
     fi
 }
 
-# pop up an osx notification about the exit status of the previous command
-# e.g. ./build; bn # go off an browse some reddit or something
-function bn {
-    if [ $? -eq 0 ] ; then
-        terminal-notifier -title '🚀 Hurray! 🚀' -message "Your build was successful. Get to work, slacker\!"
-    else
-        terminal-notifier -title '😱 Oh noes! 😱' -message "Your build build failed, were you even paying attention?"
-    fi
-}
-
 alias -r gpom="git push origin master"
 alias -r gpod="git push origin development"
 alias -r gpr="git pull --rebase"
-function gbd {
-    git log $1 \^$2 --no-merges --oneline
-}
-
-# virtualenv and wrapper. (NOTE: this is a bit slow... should probably diagnose that)
-#export WORKON_HOME=~/.envs
-#source /usr/local/bin/virtualenvwrapper.sh
-
-# rvm.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# Use vi keybindings
-bindkey -v
 
 # Setup history
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=$HOME/._zshhistory
 setopt append_history
 setopt inc_append_history
@@ -210,6 +163,3 @@ zstyle :compinstall filename '/Users/sam/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
-
-. /Users/sam/torch/install/bin/torch-activate

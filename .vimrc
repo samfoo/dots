@@ -10,7 +10,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " More packages go here:
-Plugin 'edsono/vim-matchit'
 Plugin 'kien/ctrlp.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
@@ -29,10 +28,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'pangloss/vim-javascript'
 Plugin 'fatih/vim-go'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'skammer/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'hashivim/vim-terraform'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,7 +63,7 @@ set colorcolumn=80
 
 " Colors of the rainbow and appearance
 syntax on
-colorscheme onedark
+colorscheme molokai
 
 set background=dark
 hi ColorColumn guibg=gray13
@@ -83,6 +82,8 @@ if has("gui_running")
     set guioptions=egmrt
 endif
 
+set mouse=a
+
 " Searching
 set hlsearch
 set incsearch
@@ -90,11 +91,11 @@ set ignorecase
 set smartcase
 noremap <C-N> <Esc>:noh<CR>
 
-noremap <c-s> <Esc>:vsp<CR>
+noremap <c-a> <Esc>:vsp<CR>
 noremap <c-d> <Esc>:sp<CR>
 
 " Buffers
-noremap <C-l> <Esc>:CtrlPBuffer<CR>
+" noremap <C-l> <Esc>:CtrlPBuffer<CR>
 
 " Fuzzy file finder
 noremap <Leader>r <Esc>:CtrlPClearAllCaches<CR>

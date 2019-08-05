@@ -1,4 +1,4 @@
-export PATH="$HOME/.pyenv/shims:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin"
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 # export GPG_AGENT_INFO_FILE=$HOME/.gpg-agent-info  
