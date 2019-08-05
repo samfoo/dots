@@ -3,9 +3,6 @@ unsetopt ignoreeof
 # Setup vim
 alias -r v=vim
 
-# Vagrant
-alias -r vdu="vagrant destroy -f && vagrant up"
-
 # Always try listing in color
 alias -r ls='ls --color'
 
